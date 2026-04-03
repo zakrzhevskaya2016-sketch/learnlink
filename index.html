@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KidsKey — Экшен-план</title>
+    <title>LearnLink — Экшен-план</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -57,7 +57,7 @@
 <body>
     <div id="login-screen">
         <div id="login-box">
-            <h1>KidsKey — Экшен-план</h1>
+            <h1>LearnLink — Экшен-план</h1>
             <p>Введите пароль для доступа</p>
             <input type="password" id="password" placeholder="Пароль" autofocus>
             <button onclick="tryLogin()">Войти</button>
@@ -67,7 +67,7 @@
     <div id="content"></div>
 
     <script>
-        const PASS_HASH = 'b80bee3047740304cd20017e9a38a012f00aaee0816ba91b4f5c66223157366e';
+        const PASS_HASH = '352d1cdec35a591faae641d652041809834dad37ee458765251a884476353405';
 
         async function sha256(message) {
             const msgBuffer = new TextEncoder().encode(message);
