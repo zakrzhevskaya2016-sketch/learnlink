@@ -88,8 +88,6 @@
 
 ### Пример простого пайплайна (creators.aesty.ai)
 
-![pipeline](pipeline-example.png)
-
 ```
 trend watching ──→ hook     ──→ concept    ──→ AI creator ──→ Video ──→ + demo
 product feature ──→ message ──→ scenario       (выбор       (kling 2.6,    (product
