@@ -6,164 +6,30 @@
     <title>Content Engine — LearnLink</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        #password-screen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        #password-form {
-            text-align: center;
-            padding: 40px;
-        }
-        
-        #password-form h2 {
-            color: #111;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        
-        #password-form input {
-            padding: 12px 20px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: #fff;
-            color: #111;
-            outline: none;
-            width: 250px;
-        }
-        
-        #password-form input:focus {
-            border-color: #111;
-        }
-        
-        #password-form button {
-            padding: 12px 30px;
-            font-size: 16px;
-            background: #111;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-left: 10px;
-            font-weight: bold;
-        }
-        
-        #password-form button:hover {
-            background: #333;
-        }
-        
-        #error {
-            color: #ef4444;
-            margin-top: 10px;
-            display: none;
-        }
-        
-        #content {
-            display: none;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #222;
-            background: #fff;
-            min-height: 100vh;
-            line-height: 1.7;
-        }
-        
-        #content h1 {
-            color: #111;
-            font-size: 28px;
-            margin: 30px 0 15px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        
-        #content h2 {
-            color: #111;
-            font-size: 22px;
-            margin: 25px 0 12px;
-        }
-        
-        #content h3 {
-            color: #444;
-            font-size: 18px;
-            margin: 20px 0 10px;
-        }
-        
-        #content p {
-            margin: 8px 0;
-        }
-        
-        #content strong {
-            color: #111;
-        }
-        
-        #content ul, #content ol {
-            margin: 8px 0 8px 25px;
-        }
-        
-        #content li {
-            margin: 4px 0;
-        }
-        
-        #content code {
-            background: #f0f0f0;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #111;
-        }
-        
-        #content pre {
-            background: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 10px 0;
-            border: 1px solid #e0e0e0;
-        }
-        
-        #content pre code {
-            background: none;
-            padding: 0;
-            font-size: 13px;
-            color: #333;
-        }
-        
-        #content table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 10px 0;
-        }
-        
-        #content th, #content td {
-            border: 1px solid #ddd;
-            padding: 8px 12px;
-            text-align: left;
-            font-size: 14px;
-        }
-        
-        #content th {
-            background: #f5f5f5;
-            color: #111;
-            font-weight: bold;
-        }
-        
-        #content hr {
-            border: none;
-            border-top: 1px solid #eee;
-            margin: 25px 0;
-        }
-        
-        #content a {
-            color: #2563eb;
-        }
+        #password-screen { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        #password-form { text-align: center; padding: 40px; }
+        #password-form h2 { color: #111; margin-bottom: 20px; font-size: 24px; }
+        #password-form input { padding: 12px 20px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; background: #fff; color: #111; outline: none; width: 250px; }
+        #password-form input:focus { border-color: #111; }
+        #password-form button { padding: 12px 30px; font-size: 16px; background: #111; color: #fff; border: none; border-radius: 8px; cursor: pointer; margin-left: 10px; font-weight: bold; }
+        #password-form button:hover { background: #333; }
+        #error { color: #ef4444; margin-top: 10px; display: none; }
+        #content { display: none; max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #222; background: #fff; min-height: 100vh; line-height: 1.7; }
+        #content h1 { color: #111; font-size: 28px; margin: 30px 0 15px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        #content h2 { color: #111; font-size: 22px; margin: 25px 0 12px; }
+        #content h3 { color: #444; font-size: 18px; margin: 20px 0 10px; }
+        #content p { margin: 8px 0; }
+        #content strong { color: #111; }
+        #content ul, #content ol { margin: 8px 0 8px 25px; }
+        #content li { margin: 4px 0; }
+        #content code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 14px; color: #111; }
+        #content pre { background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto; margin: 10px 0; border: 1px solid #e0e0e0; }
+        #content pre code { background: none; padding: 0; font-size: 13px; color: #333; }
+        #content table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+        #content th, #content td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; font-size: 14px; }
+        #content th { background: #f5f5f5; color: #111; font-weight: bold; }
+        #content hr { border: none; border-top: 1px solid #eee; margin: 25px 0; }
+        #content a { color: #2563eb; }
     </style>
 </head>
 <body>
@@ -177,13 +43,14 @@
             <p id="error">Wrong password</p>
         </div>
     </div>
-    
     <div id="content">
         <h1>Content Engine — LearnLink</h1>
-<p>Что сделано: 
-- консалты и ресерч рынка по контент заводам 
-- MVP контент завода 
-- роадмап на месяц </p>
+<p>Что сделано: </p>
+<ul>
+<li>консалты и ресерч рынка по контент заводам </li>
+<li>MVP контент завода </li>
+<li>роадмап на месяц </li>
+</ul>
 <hr />
 <h3>Showcase (сгенерировано за эти дни):</h3>
 <ol>
@@ -197,55 +64,85 @@
 </ol>
 <hr />
 <h2>Что я предлагаю</h2>
-<p><strong>Процесс 1 — Trend Research (ваши руки и голова, я обучу):</strong>
-- Human Сбор библиотеки референсов из ниши. Human нализ комментариев (pain points для контента)
-ддл: зависит от исполнителя, эстимейт 3 дня 
-- AI Разбор на хуки, сценарии, аватары, фоны, CTA
+<p><strong>Процесс 1 — Trend Research (ваши руки и голова, я обучу):</strong></p>
+<ul>
+<li>
+<p>Human Сбор библиотеки референсов из ниши. Human нализ комментариев (pain points для контента)
+ддл: зависит от исполнителя, эстимейт 3 дня </p>
+</li>
+<li>
+<p>AI Разбор на хуки, сценарии, аватары, фоны, CTA
 1 час
 Результат: библиотека из 30+ референсов, разложенных на компоненты с помощью AI. Минимум 10 должны быть с воронкой на продажу </p>
-<p><strong>Процесс 2 — Генерим пазлы в конструктор:</strong>
-- Собрать продукт плейсмент видео (с вас посылы + скриншоты/скринкасты)
-- Собрать библу аватаров 
-- Собрать библу СТА 
-- Собрать библу воронок, настроить мэничат
+</li>
+</ul>
+<p><strong>Процесс 2 — Генерим пазлы в конструктор:</strong></p>
+<ul>
+<li>Собрать продукт плейсмент видео (с вас посылы + скриншоты/скринкасты)</li>
+<li>Собрать библу аватаров </li>
+<li>Собрать библу СТА </li>
+<li>Собрать библу воронок, настроить мэничат
 тут оч важен импут продукта -- кто ЦА кого смотрят кому доверяют что цепляет; 
 какие боли как закрывали что конвертит в покупку 
-от сбора контекста и трендвотчинга 1 день на итерацию (по опыту будет 2-3)</p>
-<p><strong>Процесс 3 — Я достраиваю pipeline:</strong>
-- Кастомизация под ваши тренды и аватары<br />
-7 дней от сбора трендов (доделаю у себя локально -&gt; пушу на гитхаб)
-- Настройка под ваши API ключи
-1 час
-- Весь код на вашем сервере 
-- Интерфейс через ClickUp и CMS
-1-3 дня</p>
+от сбора контекста и трендвотчинга 1 день на итерацию (по опыту будет 2-3)</li>
+</ul>
+<p><strong>Процесс 3 — Я достраиваю pipeline:</strong></p>
+<ul>
+<li>
+<p>Кастомизация под ваши тренды и аватары<br />
+7 дней от сбора трендов (доделаю у себя локально -&gt; пушу на гитхаб)</p>
+</li>
+<li>
+<p>Настройка под ваши API ключи
+1 час</p>
+</li>
+<li>
+<p>Весь код на вашем сервере </p>
+</li>
+<li>Интерфейс через ClickUp и CMS
+1-3 дня</li>
+</ul>
 <h3>Процесс 4: Генерация контента</h3>
 <ul>
-<li>21 первых видео (я генерю руками)
-параллельно с кастомизацией, неделя от трендвотчинга </li>
-<li>21 новых видео (вместе с руками генерим руками)
-N дней зависит от исполнителя </li>
-<li>21 новых видео генерит исполнитель 
-N дней зависит от исполнителя </li>
+<li>
+<p>21 первых видео (я генерю руками)
+параллельно с кастомизацией, неделя от трендвотчинга </p>
+</li>
+<li>
+<p>21 новых видео (вместе с руками генерим руками)
+N дней зависит от исполнителя </p>
+</li>
+<li>
+<p>21 новых видео генерит исполнитель 
+N дней зависит от исполнителя </p>
+</li>
 </ul>
 <h3>Процесс 5: Постинг и аналитика</h3>
 <ul>
-<li>Постинг вручную или авто (ваши руки, прогретый ГЕО аккаунт)
-3 видео в день</li>
-<li>Сбор метрик в Google Sheets (ваши руки или авто) 
-чек каждый день в инсте, сбор в таблицу раз в неделю </li>
-<li>AI анализирует: какие хуки, аватары, посылы работают лучше
-раз в неделю </li>
+<li>
+<p>Постинг вручную или авто (ваши руки, прогретый ГЕО аккаунт)
+3 видео в день</p>
+</li>
+<li>
+<p>Сбор метрик в Google Sheets (ваши руки или авто) 
+чек каждый день в инсте, сбор в таблицу раз в неделю </p>
+</li>
+<li>
+<p>AI анализирует: какие хуки, аватары, посылы работают лучше
+раз в неделю </p>
+</li>
 </ul>
 <h3>Артефакт через месяц:</h3>
-<p>Вы получаете:
-- <strong>Готовый pipeline</strong> — Pipeline настроен под ваш продукт от референса к готовому видео
-- Умный AI директор: правила генерации аватаров, промптов для всего конвеера, if when механик самопроверки и минимизации ошибок 
-- <strong>Библиотека компонентов</strong> — аватары, хуки, сцены, CTA, product demos
-- 50+ видео сгенерировано и выложено 
-- <strong>Аналитика за месяц</strong> — 50+ видео, метрики, winning связки
-- <strong>AI рекомендации</strong> — какой контент делать дальше (тест)
-- Всё работает на ваших ключах, ваш продукт навсегда</p>
+<p>Вы получаете:</p>
+<ul>
+<li><strong>Готовый pipeline</strong> — Pipeline настроен под ваш продукт от референса к готовому видео</li>
+<li>Умный AI директор: правила генерации аватаров, промптов для всего конвеера, if/when механик самопроверки и минимизации ошибок</li>
+<li><strong>Библиотека компонентов</strong> — аватары, хуки, сцены, CTA, product demos</li>
+<li>50+ видео сгенерировано и выложено</li>
+<li><strong>Аналитика за месяц</strong> — 50+ видео, метрики, winning связки</li>
+<li><strong>AI рекомендации</strong> — какой контент делать дальше (тест)</li>
+<li>Всё работает на ваших ключах, ваш продукт навсегда</li>
+</ul>
 <h3>Что можно делать с этим pipeline:</h3>
 <ul>
 <li>Органика (рилсы, карусели, TikTok)</li>
@@ -265,21 +162,24 @@ N дней зависит от исполнителя </li>
 <hr />
 <h3>Права и ownership</h3>
 <p><strong>Процесс:</strong>
-1. Я разрабатываю и настраиваю pipeline у себя локально
-2. Когда готово — первый push на GitHub
-3. Вы деплоите на свой сервер, начинаем генерацию через ClickUp
-4. Месяц совместной работы (генерация, аналитика, оптимизация)
-5. Финальный push — вы получаете последнюю версию</p>
-<p><strong>Что вы получаете навсегда:</strong>
-- Рабочий pipeline на вашем сервере, полностью настроен под ваш продукт
-- Все аватары, библиотеки, правила, CRM
-- Код на вашем GitHub (fork) — ваш навсегда
-- Можете менять, дорабатывать, нанимать своих разработчиков</p>
-<p><strong>Что я оставляю за собой:</strong>
-- Исходный код — моя интеллектуальная собственность
-- Полные права на коммерческое использование, распространение и продажу другим клиентам
-- Все будущие доработки после завершения проекта</p>
-<p><strong>Простыми словами:</strong> я строю продукт полностью под вас и под ваши нужды. Вы получаете работающую копию навсегда. Я забираю код и продолжаю строить свой бизнес на его основе. Обновления после завершения — отдельная услуга.</p>
+1. Я настраиваю pipeline под вашу нишу у себя локально с вашими API ключами 
+2. Когда готово (сделала первые 21 видео качественно) — делаю первый push на GitHub
+3. Вы деплоите на свой сервер, начинаем генерацию через ClickUp полностью на вашей инфраструктуре. Продолжаю улучшать пайплайн по необходимости у себя локально -&gt; пуш на гит -&gt; деплой изменений к вам
+5. Через месяц финальный push от меня к вам 
+6. Если прекращаем сотрудничество, то репа остается вам, я делаю ее копирование и продолжаю строить свой SaaS уже в новом репозитории</p>
+<p><strong>Что вы получаете навсегда:</strong></p>
+<ul>
+<li>Рабочий pipeline на вашем сервере, полностью настроен под ваш продукт</li>
+<li>Все аватары, библиотеки, правила, CRM</li>
+<li>Код на вашем GitHub (fork) — ваш навсегда</li>
+</ul>
+<p><strong>Что я оставляю за собой:</strong></p>
+<ul>
+<li>Исходный код -- конечно без ваших ключей, контента и тп </li>
+<li>Полные права на коммерческое использование, распространение и продажу другим клиентам</li>
+<li>Все будущие доработки после завершения проекта</li>
+</ul>
+<p><strong>Простыми словами:</strong> я строю продукт полностью под вас и под ваш запрос. Вы получаете работающую копию навсегда. Я забираю код и продолжаю строить свой бизнес на его основе. </p>
 <hr />
 <h2>Визуальный pipeline</h2>
 <pre><code>┌─────────────────────────────────────────────────────────────────┐
@@ -487,20 +387,23 @@ N дней зависит от исполнителя </li>
 └── ...
 </code></pre>
 <h3>ClickUp API — возможности и ограничения</h3>
-<p><strong>Что МОЖНО:</strong>
-- Создавать/обновлять задачи
-- Писать комментарии
-- Двигать по статусам
-- Прикреплять файлы (attachments)
-- Ловить webhooks (задача перемещена, комментарий добавлен)
-- Кастомные поля (аватар, hook, pipeline type, cost)</p>
-<p><strong>Ограничения:</strong>
-- Файлы: максимум ~100MB на attachment (видео 720p обычно 2-10MB — ок)
-- Rate limit: 100 запросов в минуту (достаточно)
-- Webhooks: нужен публичный URL (сервер с доменом)</p>
+<p><strong>Что МОЖНО:</strong></p>
+<ul>
+<li>Создавать/обновлять задачи</li>
+<li>Писать комментарии</li>
+<li>Двигать по статусам</li>
+<li>Прикреплять файлы (attachments)</li>
+<li>Ловить webhooks (задача перемещена, комментарий добавлен)</li>
+<li>Кастомные поля (аватар, hook, pipeline type, cost)</li>
+</ul>
+<p><strong>Ограничения:</strong></p>
+<ul>
+<li>Файлы: максимум ~100MB на attachment (видео 720p обычно 2-10MB — ок)</li>
+<li>Rate limit: 100 запросов в минуту (достаточно)</li>
+<li>Webhooks: нужен публичный URL (сервер с доменом)</li>
+</ul>
 <p><strong>Для нашего flow проблем нет</strong> — видео 720p весят 1-10MB, это далеко от лимита.</p>
     </div>
-    
     <script>
         function checkPwd() {
             if (document.getElementById('pwd').value === 'learnlink') {
